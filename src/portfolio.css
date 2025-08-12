@@ -1,0 +1,88 @@
+:root{
+  --purple-800: #4b0073;
+  --purple-600: #6a0dad;
+  --purple-500: #800080;
+  --purple-200: #e6d4f6;
+  --white: #ffffff;
+  --muted: #6b5b7a;
+}
+
+*{box-sizing:border-box}
+
+body{margin:0;font-family: 'Segoe UI', Tahoma, sans-serif;background: #f8f6fb;color:var(--purple-800)}
+
+.portfolio-container{min-height:100vh;display:flex;flex-direction:column}
+.header{background:linear-gradient(90deg,var(--purple-600),var(--purple-500));color:var(--white)}
+.header-content{max-width:1100px;margin:auto;display:flex;justify-content:space-between;align-items:center;padding:1rem;gap:1rem;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:0.8rem}
+.logo{width:56px;height:56px;border-radius:10px;object-fit:cover;border:2px solid rgba(255,255,255,0.15)}
+.brand-text h1{margin:0;font-size:1.05rem;font-weight:700}
+.brand-text p{margin:0;font-size:0.85rem;opacity:0.95}
+.nav-links{display:flex;align-items:center;gap:0.5rem}
+.nav-links a{color:var(--white);text-decoration:none;padding:0.45rem 0.7rem;border-radius:8px;font-weight:600}
+.nav-links a:hover{background:rgba(255,255,255,0.06)}
+.whatsapp-btn{background:#25d366;color:white;padding:0.45rem 0.8rem;border-radius:8px;font-weight:700}
+
+.main{flex:1}
+.hero{max-width:1100px;margin:auto;display:flex;gap:2rem;padding:2rem 1rem;align-items:center;flex-wrap:wrap}
+.hero-text{flex:1;min-width:260px}
+.hero-text h2{color:var(--purple-800);font-size:2.2rem;margin:0 0 0.5rem 0}
+.lead{color:var(--muted);margin-top:0}
+.hero-buttons{margin-top:1rem}
+.primary-btn{background:var(--purple-500);color:var(--white);padding:0.6rem 1.1rem;border-radius:28px;text-decoration:none;font-weight:700;display:inline-block;margin-right:0.6rem}
+.primary-btn:hover{background:var(--purple-800)}
+.secondary-btn{border:2px solid var(--purple-500);color:var(--purple-500);padding:0.5rem 0.9rem;border-radius:28px;text-decoration:none;font-weight:700}
+
+.meta{list-style:none;padding:0;margin:1rem 0 0 0;display:flex;gap:1rem;flex-wrap:wrap}
+.meta li{background:var(--white);padding:0.4rem 0.7rem;border-radius:14px;box-shadow:0 2px 8px rgba(88,61,119,0.06);font-size:0.9rem}
+
+.hero-image{flex:1;display:flex;justify-content:center;}
+.hero-image img{width:100%;max-width:520px;border-radius:16px;box-shadow:0 12px 30px rgba(103,58,183,0.15);border:6px solid rgba(255,255,255,0.06);background:linear-gradient(180deg,var(--purple-200),transparent)}
+
+.projects{max-width:1100px;margin:2rem auto;padding:0 1rem}
+.projects h3{margin:0 0 0.3rem 0}
+.section-sub{color:var(--muted);margin-top:0}
+.project-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1rem;margin-top:1rem}
+.project-card{background:var(--white);border-radius:12px;overflow:hidden;box-shadow:0 10px 30px rgba(16,12,38,0.06);display:flex;flex-direction:column;transition:transform 0.25s}
+.project-card:hover{transform:translateY(-6px)}
+.project-img{width:100%;height:160px;object-fit:cover}
+.project-body{padding:1rem}
+.project-body h4{margin:0 0 0.4rem 0}
+.project-desc{color:var(--muted);margin:0 0 0.6rem 0}
+.project-links a{margin-right:0.6rem;color:var(--purple-500);font-weight:700;text-decoration:none}
+
+.skills{max-width:1100px;margin:2rem auto;padding:0 1rem}
+.skill-list{display:flex;flex-wrap:wrap;gap:0.5rem}
+.skill{background:var(--purple-200);padding:0.4rem 0.7rem;border-radius:20px;font-weight:600}
+
+.experience{max-width:1100px;margin:2rem auto;padding:0 1rem}
+.exp-card{background:linear-gradient(180deg,rgba(255,255,255,0.9),rgba(255,255,255,0.96));padding:1rem;border-radius:10px;box-shadow:0 8px 24px rgba(95,40,150,0.06)}
+.exp-meta{color:var(--muted);margin-top:0}
+.exp-card ul{margin:0.5rem 0 0 1rem;color:var(--muted)}
+
+.contact{max-width:1100px;margin:2rem auto;padding:1.5rem;display:flex;gap:1.2rem;align-items:flex-start;flex-wrap:wrap}
+.contact-text{flex:1;min-width:260px}
+.contact-form{flex:1;min-width:260px;display:flex;flex-direction:column;gap:0.6rem}
+.contact-form input,.contact-form textarea{padding:0.7rem;border-radius:8px;border:1px solid #e6d9f6}
+
+.footer{background:linear-gradient(90deg,var(--purple-600),var(--purple-500));color:var(--white);text-align:center;padding:1rem;margin-top:2rem}
+
+/* Responsive tweaks */
+@media (max-width: 900px){
+  .hero-text h2{font-size:1.9rem}
+  .hero-image img{max-width:420px}
+}
+
+@media (max-width: 700px){
+  .header-content{padding:0.8rem}
+  .nav-links{width:100%;justify-content:center}
+  .hero{padding:1rem}
+  .project-img{height:140px}
+}
+
+@media (max-width: 480px){
+  .hero-text h2{font-size:1.6rem}
+  .meta{justify-content:center}
+  .primary-btn, .secondary-btn{width:100%;text-align:center}
+  .hero-image img{max-width:100%}
+}
